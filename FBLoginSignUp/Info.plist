@@ -2,18 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.919830008755-odk5i8kj1qrn6tn9lj5spkplv3hham5m</string>
-			</array>
-		</dict>
-	</array>
-	<key>GIDClientID</key>
-	<string>919830008755-odk5i8kj1qrn6tn9lj5spkplv3hham5m.apps.googleusercontent.com</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>YOUR_REVERSED_CLIENT_ID</string>
+            </array>
+        </dict>
+    </array>
+    <key>GIDClientID</key>
+    <string>YOUR_CLIENT_ID.apps.googleusercontent.com</string>
 </dict>
 </plist>
