@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 @Observable
-final class AppStateViewModel {
+final class AppStateViewModel: ObservableObject {
     var currentUser: UserInfo? = nil
     
     init() {

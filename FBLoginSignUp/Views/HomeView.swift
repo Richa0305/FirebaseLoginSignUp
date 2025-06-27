@@ -19,7 +19,7 @@ struct HomeView: View {
             
             Button(action: {
                 do {
-                    try AuthenticationManager.shared.signOut()
+                    try appState.signOut()
                     appState.currentUser = nil
                 } catch {
                     print("Sign out error: \(error.localizedDescription)")

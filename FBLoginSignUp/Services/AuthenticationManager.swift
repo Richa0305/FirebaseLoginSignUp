@@ -47,6 +47,10 @@ class AuthenticationManager {
         return UserInfo(user: authResult.user)
     }
     
+    func sendPasswordReset(email: String) async throws {
+        try await Auth.auth().sendPasswordReset(withEmail: email)
+    }
+    
     func signOut() throws {
         try Auth.auth().signOut()
     }
