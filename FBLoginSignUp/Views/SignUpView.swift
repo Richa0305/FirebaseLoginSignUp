@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SignUpView: View {
     @Environment(AppStateViewModel.self) private var appState
+    @Environment(Theme.self) private var theme
     @Environment(\ .dismiss) private var dismiss
     @State var viewModel = SignUpViewModel()
     
@@ -55,8 +56,10 @@ struct SignUpView: View {
             LoadingOverlay(isLoading: $viewModel.isLoading)
         }
         .errorAlert(errorMessage: $viewModel.errorMessage)
+        .background(theme.loginGradient)
     }
 }
 #Preview {
     SignUpView()
+        .environment(Theme())
 }
