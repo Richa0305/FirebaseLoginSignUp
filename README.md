@@ -49,9 +49,11 @@ In Firebase Console → **Authentication** → **Sign-in method** enable:
    ```
    
 Copy those values from the downloaded plist.
+
 7. **Signing & Capabilities**  
    - Under **Signing & Capabilities**, select your **Team** and enable **Automatic signing**.  
    - To use **Sign in with Apple**, you **must** have a **paid Apple Developer Program** membership. 
+
 8. **Build & Run** on device (recommended) or simulator.
 
 ---
