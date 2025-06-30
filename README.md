@@ -13,11 +13,11 @@ A SwiftUI starter project demonstrating Firebase Authentication with:
 1. **Clone** this repo and open `FBLoginSignUp.xcodeproj` (or `.xcworkspace` if using CocoaPods).  
 2. **Obtain** a `GoogleService-Info.plist` from your Firebase project, and place it xcode project
 3. In **Info.plist**, replace these placeholders:
-   xml
+   ```xml
    <key>CLIENT_ID</key>
    <string>__YOUR_GOOGLE_CLIENT_ID__</string>
    <key>REVERSED_CLIENT_ID</key>
-   <string>__YOUR_REVERSED_CLIENT_ID__</string>
+   <string>__YOUR_REVERSED_CLIENT_ID__</string>```
 
 4. **Set** your Xcode target’s **Bundle Identifier** (must match Firebase) and select your **Signing Team**.
 5. **Build & run** on device. Its recommended to run on device for Apple Sign In to work properly.
@@ -40,11 +40,11 @@ A SwiftUI starter project demonstrating Firebase Authentication with:
    * **Apple**
 6. **Download GoogleService-Info.plist** after enabling the signin methods and replace existing GoogleService-Info.plist with this new one
 7. In **Info.plist**, replace these placeholders:
-   xml
+   ```xml
    <key>CLIENT_ID</key>
    <string>__YOUR_GOOGLE_CLIENT_ID__</string>
    <key>REVERSED_CLIENT_ID</key>
-   <string>__YOUR_REVERSED_CLIENT_ID__</string>
+   <string>__YOUR_REVERSED_CLIENT_ID__</string>```
 
 
 * **Apple** (*requires a paid Apple Developer account*):
