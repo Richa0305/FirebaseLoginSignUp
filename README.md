@@ -31,10 +31,21 @@ In Firebase Console → **Authentication** → **Sign-in method** enable:
 6. **Fill Info.plist placeholders**  
    ```
    xml
-   <key>CLIENT_ID</key>
-   <string>__YOUR_GOOGLE_CLIENT_ID__</string>
-   <key>REVERSED_CLIENT_ID</key>
-   <string>__YOUR_REVERSED_CLIENT_ID__</string>
+   <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>__YOUR_REVERSED_CLIENT_ID__</string>
+			</array>
+		</dict>
+	</array>
+	<key>GIDClientID</key>
+	<string>__YOUR_GOOGLE_CLIENT_ID__</string>
+   </dict>
    ```
    
 Copy those values from the downloaded plist.
