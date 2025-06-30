@@ -18,6 +18,15 @@ This repository provides a basic SwiftUI project that demonstrates Firebase auth
 - The project uses official Apple and Google sign-in buttons. Follow their branding guidelines if you customize them.
 - You can replace the gradient or other theme values in the Swift code to match your app.
 
+## Firebase Project Setup
+
+- Create a new Project in firebase console
+- Ensure to use correct bundle id of your project, bundle id should be unique for your project. 
+- Firebase configuration is already complete, you just need to download the `GoogleService-Info.plist` from your Firebase project. And place it in your project
+- Once project is created, in firebase console, go to Authentication, and for iOS project enable sign-in methods for Email/Password, Google and Apple
+- Download the updated `GoogleService-Info.plist` file and replace it with the existing one
+- **Apple signin will only work with paid Apple developer account**
+
 ## License
 
 This template is released under the MIT License. See [LICENSE](LICENSE) for details.
