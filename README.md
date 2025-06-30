@@ -20,14 +20,13 @@ A SwiftUI starter project demonstrating Firebase Authentication with:
 4. **Enable Authentication Providers**
 In Firebase Console → **Authentication** → **Sign-in method** enable:
 
-* **Email/Password**
-* **Google**
-* **Apple** (*requires paid Apple Developer account*)
+   * **Email/Password**
+   * **Google**
+   * **Apple** (*requires paid Apple Developer account*)
 
-5. **Re-download Firebase config**
-
-   * After enabling Google & Apple, **download** a fresh `GoogleService-Info.plist`.
-   * **Replace** the one in your Xcode project with this updated file.
+5. **Re-download the Firebase config**  
+   - After you enable Google & Apple sign-in in the Firebase console, download a fresh `GoogleService-Info.plist`.  
+   - Overwrite the existing plist in your Xcode project with this new file—this is critical for Google Sign-In to work correctly, as the initial download won’t include the updated OAuth credentials.
   
 6. **Fill Info.plist placeholders**  
    ```
