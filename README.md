@@ -11,65 +11,60 @@ A SwiftUI starter project demonstrating Firebase Authentication with:
 ## 🚀 Getting Started
 
 1. **Clone** this repo and open `FBLoginSignUp.xcodeproj` (or `.xcworkspace` if using CocoaPods).  
-2. **Obtain** a `GoogleService-Info.plist` from your Firebase project, and place it xcode project
-3. In **Info.plist**, replace these placeholders:
-   ```xml
+2. **Bundle Identifier**  
+   - This template ships with `com.yourcompany.FBLoginSignUp`.  
+   - Replace it in Xcode with your own app’s bundle ID (must match Firebase).  
+3. **Initial Firebase config**  
+   - In the Firebase console, under your iOS app, **download** the `GoogleService-Info.plist`.  
+   - Drag it into your Xcode project (target: `FBLoginSignUp`).  
+4. **Enable Authentication Providers**
+In Firebase Console → **Authentication** → **Sign-in method** enable:
+
+* **Email/Password**
+* **Google**
+* **Apple** (*requires paid Apple Developer account*)
+
+5. **Re-download Firebase config**
+
+   * After enabling Google & Apple, **download** a fresh `GoogleService-Info.plist`.
+   * **Replace** the one in your Xcode project with this updated file.
+  
+6. **Fill Info.plist placeholders**  
+   ```
+   xml
    <key>CLIENT_ID</key>
    <string>__YOUR_GOOGLE_CLIENT_ID__</string>
    <key>REVERSED_CLIENT_ID</key>
-   <string>__YOUR_REVERSED_CLIENT_ID__</string>```
-
-4. **Set** your Xcode target’s **Bundle Identifier** (must match Firebase) and select your **Signing Team**.
-5. **Build & run** on device. Its recommended to run on device for Apple Sign In to work properly.
-
----
-
-## 🔧 Firebase Project Setup
-
-1. **Create / Select** a project in the [Firebase Console](https://console.firebase.google.com/).
-2. **Add iOS app**:
-
-   * **Bundle ID**: must exactly match step 4 above.
-   * Register and click **Download GoogleService-Info.plist**.
-3. **Add** that downloaded plist to your Xcode project (target: `FBLoginSignUp`).
-4. **Copy** the `CLIENT_ID` & one `REVERSED_CLIENT_ID` from the plist into your **Info.plist** placeholders.
-5. **Enable** sign-in methods (Console → Authentication → Sign-in method):
-
-   * **Email/Password**
-   * **Google**
-   * **Apple**
-6. **Download GoogleService-Info.plist** after enabling the signin methods and replace existing GoogleService-Info.plist with this new one
-7. In **Info.plist**, replace these placeholders:
-   ```xml
-   <key>CLIENT_ID</key>
-   <string>__YOUR_GOOGLE_CLIENT_ID__</string>
-   <key>REVERSED_CLIENT_ID</key>
-   <string>__YOUR_REVERSED_CLIENT_ID__</string>```
-
-
-* **Apple** (*requires a paid Apple Developer account*):
-     1. In Apple Developer Portal, add “Sign in with Apple” to your App ID.
-     2. Create a Services ID, configure return URLs, generate a key and upload it in Firebase.
+   <string>__YOUR_REVERSED_CLIENT_ID__</string>
+   ```
+   
+Copy those values from the downloaded plist.
+7. **Signing & Capabilities**  
+   - Under **Signing & Capabilities**, select your **Team** and enable **Automatic signing**.  
+   - To use **Sign in with Apple**, you **must** have a **paid Apple Developer Program** membership. 
+8. **Build & Run** on device (recommended) or simulator.
 
 ---
 
 ## 🧰 Customization
 
-* **Assets**: swap out images in `Assets.xcassets`.
-* **Branding**: if you restyle Apple/Google buttons, follow their [HIG](https://developer.apple.com/design/human-interface-guidelines/) and [Brand Guidelines](https://developers.google.com/identity/branding-guidelines).
-* **Styling**: adjust gradients, corner radii, fonts, colors in the SwiftUI views to match your app.
+* **Assets**: swap images in `Assets.xcassets`.
+* **Branding**: if restyling Apple/Google buttons, follow their [HIG](https://developer.apple.com/design/human-interface-guidelines/) and [Brand Guidelines](https://developers.google.com/identity/branding-guidelines).
+* **Styling**: tweak gradients, fonts, corner radii in SwiftUI views.
 
 ---
 
 ## 🏃‍♀️ Testing
 
-* **Email/Password** → Create account, sign out, sign back in.
-* **Google** → Tap “Continue with Google” and choose an account.
-* **Apple** → Tap “Continue with Apple” (Sandbox tester on simulator; real Apple ID on device).
+* **Email/Password** → sign up, sign out, sign back in.
+* **Google** → tap “Continue with Google” and choose an account.
+* **Apple** → tap “Continue with Apple” (use a sandbox tester on simulator or a real Apple ID on device).
 
 ---
 
 ## 📜 License
 
-This template is MIT-licensed. See LICENSE for details.
-*The Google “G” logo is for demo only—replace with your own asset before shipping.*
+This template is MIT-licensed. See [LICENSE](LICENSE).
+*The Google “G” logo is demo-only—replace with your own asset before shipping.*
+
+
