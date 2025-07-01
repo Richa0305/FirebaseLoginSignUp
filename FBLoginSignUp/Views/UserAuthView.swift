@@ -10,7 +10,8 @@ import AuthenticationServices
 
 struct UserAuthView: View {
     @Environment(AppStateViewModel.self) private var appState
-    
+    @Environment(Theme.self) private var theme
+
     @Environment(\ .dismiss) private var dismiss
     @State private var viewModel = UserAuthViewModel()
     
@@ -85,7 +86,7 @@ struct UserAuthView: View {
             Spacer()
         }
         .padding()
-        .background(Color(.systemBackground))
+        .background(theme.loginGradient)
     }
 }
 
@@ -95,5 +96,6 @@ struct UserAuthView_Previews: PreviewProvider {
             UserAuthView()
         }
         .environment(AppStateViewModel())  // 👈 inject environment manually for preview
+        .environment(Theme())
     }
 }

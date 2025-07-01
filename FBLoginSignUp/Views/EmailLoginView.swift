@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EmailLoginView: View {
     @Environment(AppStateViewModel.self) private var appState
+    @Environment(Theme.self) private var theme
     @Environment(\ .dismiss) private var dismiss
     @State private var viewModel = EmailLoginViewModel()
     
@@ -64,9 +65,11 @@ struct EmailLoginView: View {
                 Text("A link to reset your password has been sent to \(viewModel.email).")
             }
         )
+        .background(theme.loginGradient)
     }
 }
 #Preview {
     EmailLoginView()
         .environment(AppStateViewModel())
+        .environment(Theme())
 }

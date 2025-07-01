@@ -22,6 +22,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct FBLoginSignUpApp: App {
   // register app delegate for Firebase setup
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+  @State private var theme = Theme()
 
 
   var body: some Scene {
@@ -29,6 +30,7 @@ struct FBLoginSignUpApp: App {
       NavigationView {
         ContentView()
       }
+      .environment(theme)
     }
   }
 }
